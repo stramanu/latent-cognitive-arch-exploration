@@ -12,7 +12,7 @@
 
 Current large language models (LLMs) achieve remarkable results by framing intelligence as large-scale autoregressive next-token prediction. While effective for linguistic coherence and knowledge retrieval, this paradigm implicitly equates language with thought, leading to systems that lack persistent internal state, intrinsic goals, long-horizon planning, and energetic efficiency. Neuroscience and cognitive science suggest a different picture: human reasoning primarily unfolds in non-linguistic representational spaces, while language operates as a secondary mechanism for reflection, control, and communication.
 
-In this paper, we propose a **Latent Cognitive Architecture (LCA)**, a post-language-centric framework in which reasoning is implemented as the continuous evolution of internal latent states under goals, constraints, and predictive pressures. Language is repositioned as an optional decoding, introspection, and regulation layer, rather than the substrate of cognition itself. We formalize the core components of LCA, connect them to contemporary theories such as predictive processing, active inference, and Joint-Embedding Predictive Architectures (JEPA), and outline a research roadmap toward scalable, goal-directed, and energy-efficient artificial intelligence. We argue that surpassing the limits of language-centric AI requires an architectural shift from token-based reasoning to latent cognitive dynamics.
+In this paper, we propose a **Latent Cognitive Architecture (LCA)**, a post-language-centric framework in which reasoning is implemented as the continuous evolution of internal latent states under goals, constraints, and predictive pressures. Language is repositioned as an optional decoding, introspection, and regulation layer, rather than the substrate of cognition itself. We formalize the core components of LCA, connect them to contemporary theories such as predictive processing, active inference, and Joint-Embedding Predictive Architectures (JEPA), and outline a research roadmap toward scalable, goal-directed, and energy-efficient artificial intelligence. We further suggest that linguistic data may be distilled into a deeper latent semantic substrate, where concepts are represented not as words but as grounded internal structures. We argue that surpassing the limits of language-centric AI requires an architectural shift from token-based reasoning to latent cognitive dynamics.
 
 ---
 
@@ -23,6 +23,8 @@ The recent success of large language models has revived an old philosophical and
 Humans, by contrast, do not reason primarily in words. Planning, intuition, spatial reasoning, motor control, and even abstract problem solving rely on internal representations that are continuous, multimodal, and largely inaccessible to conscious verbalization. Language enters later, as a tool for self-monitoring, explanation, and social coordination.
 
 This mismatch suggests that current LLMs approximate *the appearance of reasoning* rather than its underlying mechanism. The Latent Cognitive Architecture is motivated by the hypothesis that true general intelligence requires internal cognitive processes that are **prior to, and independent from, language**.
+
+A modest extension of this hypothesis is that language may still provide useful semantic supervision, provided that its content is transformed into deeper latent conceptual structures rather than treated as the native format of cognition.
 
 ---
 
@@ -133,6 +135,16 @@ Attention is implemented as dynamic gating over latent dimensions, not token sel
 
 ---
 
+### 5.6 Latent Semantic Substrate (Speculative Extension)
+
+A natural extension of LCA is the possibility that semantic regularities extracted from language, perception, and interaction may converge into a shared latent conceptual space.
+
+Under this view, words are not the primitive units of thought, but surface anchors for deeper internal structures. A concept would therefore not be identified with a token or a static embedding, but with a multimodal latent configuration that can be reactivated, transformed, and integrated into ongoing cognition.
+
+This idea remains speculative, but it suggests a possible path for using language as supervision without making language itself the cognitive substrate.
+
+---
+
 ## 6. Internal Language and Metacognitive Control
 
 Humans frequently experience thought as *inner speech*, yet this speech is not the generator of thought but its monitor.
@@ -176,6 +188,8 @@ Prediction error corresponds to cognitive surprise. The system minimizes an inte
 
 When language data is available, it supervises only the **decoder**, preventing linguistic structure from distorting latent cognition.
 
+In a stronger future version of the architecture, language could also serve as weak supervision for stabilizing latent conceptual structures, without becoming the primary medium of reasoning.
+
 ---
 
 ## 8. Efficiency, Scalability, and Hardware Alignment
@@ -199,6 +213,8 @@ LCA is **convergent but not identical** to JEPA:
 
 In this sense, LCA can be viewed as a **cognitive-level generalization of JEPA**.
 
+The speculative notion of a latent semantic substrate is also compatible with this comparison: where JEPA emphasizes prediction in latent space, LCA may additionally require concept stabilization, value orientation, and internal regulation.
+
 ---
 
 ## 10. Open Problems and Research Directions
@@ -208,6 +224,7 @@ Key challenges include:
 - Alignment and value encoding
 - Evaluation without linguistic traces
 - Safety under autonomous goal pursuit
+- Grounding and stabilizing latent conceptual structures
 
 These are architectural problems, not merely training issues.
 
@@ -216,6 +233,8 @@ These are architectural problems, not merely training issues.
 ## 11. Conclusion
 
 Language-centric AI has reached impressive but fragile heights. To progress toward robust, autonomous, and efficient intelligence, we must abandon the assumption that thought is made of words. The Latent Cognitive Architecture proposes a principled alternative: cognition as latent, goal-directed dynamics, with language as a reflective interface rather than a foundation. This shift mirrors biological intelligence and may define the next paradigm of artificial cognition.
+
+A conservative extension of this proposal is that language remains useful, not as the substance of thought, but as a partial guide toward deeper latent semantic organization.
 
 ---
 
