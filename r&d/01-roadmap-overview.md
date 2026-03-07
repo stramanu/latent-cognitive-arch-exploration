@@ -235,12 +235,12 @@ The correct strategy is to treat each stage as a controlled step toward richer i
 
 A practical way to continue this roadmap is to create one document per stage:
 
-- `rd-02-multimodal-latent-alignment.md`
-- `rd-03-latent-predictive-dynamics.md`
-- `rd-04-goal-and-constraint-conditioning.md`
-- `rd-05-memory-integration-and-stabilization.md`
-- `rd-06-emergence-of-dccs.md`
-- `rd-07-introspection-and-language-interface.md`
+- `02-multimodal-latent-alignment.md`
+- `03-latent-predictive-dynamics.md`
+- `04-goal-and-constraint-conditioning.md`
+- `05-memory-integration-and-stabilization.md`
+- `06-emergence-of-dccs.md`
+- `07-introspection-and-language-interface.md`
 
 Each document should later specify:
 
