@@ -42,6 +42,15 @@ This stage is primarily about representation learning. The goal is to create a s
 ### Expected outcome
 The system should produce CLCVs that preserve enough common structure across modalities to support cross-modal alignment and basic concept clustering.
 
+### How this differs from CLIP / ImageBind
+This is the point where the stage must not collapse into "retrain a contrastive multimodal encoder." Contrastive alignment (CLIP, ImageBind) optimizes a **static** space for instance matching and retrieval: success is measured by whether the right image and the right caption land nearby. That is necessary but not sufficient here. A CLCV has a different success criterion — it must be a good **input to a dynamics model**:
+
+- it must be **temporally predictable** (Stage 2): its future should be forecastable in latent space, which retrieval-optimized embeddings are not trained to guarantee;
+- it must be **goal-conditionable** (Stage 3): the same representation must evolve differently under different goals;
+- it must support **state that changes over time**, not just static instance identity.
+
+Concretely: an alignment that scores well on retrieval but whose representations cannot be rolled forward or steered by goals is a Stage-1 *failure*, even though it would be a CLIP success. The metric for this stage is therefore downstream (does the representation enable predictive, controllable dynamics?), not retrieval accuracy — see `r&d/evaluation-framework.md`.
+
 ### Research question
 Can a single latent space support unified local cognitive representations across heterogeneous modalities?
 

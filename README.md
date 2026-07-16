@@ -36,10 +36,14 @@ I don't know if this is right. But it feels worth exploring.
 | File | Description |
 |------|-------------|
 | `paper.md` | A more structured document outlining the "Latent Cognitive Architecture" concept. Speculative and exploratory. |
-| `notes/open-questions.md` | Things I don't understand yet. |
-| `notes/rough-ideas.md` | Unpolished thoughts, fragments, intuitions. |
+| `r&d/00-foundational-units.md` | The core methodological distinction: CLCV (engineering unit) vs DCC (cognitive target). |
+| `r&d/01-roadmap-overview.md` | A staged research roadmap from CLCV engineering toward DCC emergence. |
+| `r&d/evaluation-framework.md` | How to measure progress in falsifiable terms — the project's hardest open problem. |
+| `r&d/study-plan.md` | What to study (Dreamer, JEPA, Coconut) before attempting a first toy experiment. |
+| `notes/open-questions.md` | Things I don't understand yet — collected in one place. |
+| `notes/rough-ideas.md` | A personal scratchpad for unpolished fragments. Intentionally sparse. |
 
-Start with this README. If you're curious, the `paper.md` goes deeper — but with the same disclaimers.
+Start with this README, then `paper.md`. The `r&d/` folder is where the thinking gets more operational — but with the same disclaimers.
 
 ---
 

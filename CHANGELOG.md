@@ -39,6 +39,41 @@ Explain why this modification was introduced.
 
 ---
 
+## 2026-07-16 — Modernization of the LLM critique, honesty pass, and first evaluation framework
+
+**Type:** revision + addition
+**Status:** conservative
+
+**Summary**
+A cleanup pass to bring the critique of language-centric AI up to the 2024–2025 state of the art, remove overclaims, and give the project its first falsifiable evaluation framework and a concrete study path toward a toy experiment.
+
+**What changed**
+- **§2 rewritten.** The old critique ("LLMs think in words") was retired as a strawman: modern transformers compute in a continuous internal space, with tokens as the interface. The limitation is now located precisely — training objective, token interface, and the coupling of reasoning depth to token count — and grounded in current work: Bachmann & Nagarajan (2024), Coconut (Hao et al., 2024), recurrent-depth latent reasoning (Geiping et al., 2025), the latent-reasoning survey (Zhu et al., 2025), DreamerV3 (Nature 2025), V-JEPA 2 (2025). The latent-reasoning line is framed as *corroboration* of the thesis; the missing unification (§2.4) is framed as where LCA is aimed.
+- **§1 positioning added:** "reformist in method, revisionist in framing" — resolving the revolutionary-vs-incremental tension honestly.
+- **§8 (efficiency) rewritten** from asserted claims ("energy drops dramatically," "parallelizable") to an argued position that separates what can be claimed from what cannot; efficiency is now an open empirical question.
+- **§9:** an honest lineage note added — the core intuition predates exposure to JEPA; LeCun's work confirmed and sharpened it rather than seeding it.
+- **§10:** evaluation flagged as the load-bearing open problem, pointing to the new framework.
+- **Roadmap Stage 1** now explicitly distinguishes itself from CLIP/ImageBind (success = downstream predictive/controllable dynamics, not retrieval).
+- **New `r&d/evaluation-framework.md`:** falsifiable CLCV- and DCC-level metrics, the "measure function not verbalization" principle, mandatory baselines, and a minimal toy experiment.
+- **New `r&d/study-plan.md`:** Dreamer → JEPA → Coconut study path toward that experiment.
+- **`notes/open-questions.md`** populated by consolidating questions already scattered across the corpus.
+- **References** updated with the six current sources (arXiv/Nature identifiers).
+
+**What remained unchanged**
+- Cognition is still modeled as latent, goal-directed dynamics; language remains an interface.
+- The CLCV/DCC distinction remains the methodological backbone.
+- The document stays speculative and exploratory; no claim of validation.
+
+**Reason for the change**
+The critique risked attacking an AI that no longer exists, and several claims (efficiency in particular) were asserted rather than argued. The pass makes the project current, honest about its limits, and — via the evaluation framework — for the first time *falsifiable*.
+
+**Open questions**
+- Will the toy experiment's decoder-removal test actually hold, or reveal language as the hidden substrate?
+- Is the CLCV → DCC emergence hypothesis measurable with the proposed metrics, or does it need new ones?
+- Does goal-conditioning reshape latent dynamics, or act as inert metadata?
+
+---
+
 ## 2026-03-06 — Conservative semantic extension to LCA
 
 **Type:** addition  
