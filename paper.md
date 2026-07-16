@@ -167,21 +167,30 @@ This idea remains speculative, but it suggests a possible path for using languag
 
 ---
 
-## 6. Internal Language and Metacognitive Control
+## 6. Metacognition and the Introspection Interface
 
-Humans frequently experience thought as *inner speech*, yet this speech is not the generator of thought but its monitor.
+Humans frequently experience thought as *inner speech*, yet this speech is not the generator of thought but a monitor and a report. LCA takes this seriously by splitting what is usually lumped together into two distinct mechanisms — one that is *part of* cognition, and one that is an *interface onto* it. Conflating them (as an earlier version of this section did, under a single "internal verbalization module") hides exactly where the interface/substrate boundary falls.
 
-In LCA, a **private internal verbalization module** periodically decodes latent states into language-like representations. This serves:
+### 6.1 Latent metacognition (in-the-loop, load-bearing)
 
-- Self-consistency checking
-- Error detection and correction
-- Cognitive stabilization
-- Alignment with external communication norms
+The first mechanism is a **latent self-model**: the system takes its own current state as an object and modulates it. This is where intermediate goals are formed and refined, where predicted reactions to candidate actions are evaluated, and where the ongoing trajectory is stabilized or redirected.
 
-Crucially, this internal language:
-- Does not drive the core dynamics
-- Can be disabled without collapsing cognition
-- Is not fully exposed externally
+Crucially, this process is **latent, not linguistic**, and it **writes**: it sits inside the cognitive loop and helps *generate* the dynamics rather than merely observing them. It is therefore **not removable** — ablating it should degrade cognition, because it is substrate, not decoration.
+
+### 6.2 Inner speech as a read-out decoder (out-of-loop, removable)
+
+The second mechanism is a **read-only decoder** attached on top of the latent metacognition, which renders it into language (or another legible form) so that a human — or the system itself, for external communication — can inspect the internal thought. This serves interpretability, alignment, and communication.
+
+This decoder:
+- does **not** drive the core dynamics;
+- can be disabled without collapsing cognition — removing it costs *visibility*, not *thought*;
+- must remain strictly read-only and downstream: if its output is ever used to supervise or reward the system, language re-enters the loop and begins to reshape the substrate (the Stage-6 risk).
+
+### 6.3 Two consequences
+
+**A testable double dissociation.** The split makes two opposite, independently checkable predictions (see `r&d/evaluation-framework.md` §3.4): removing the read-out decoder should change nothing but observability, while ablating the latent metacognition should measurably degrade cognition. One removal that breaks nothing *and* one that breaks a lot is stronger evidence than any single test — it shows the interface/substrate boundary is real and *located*, not merely asserted.
+
+**Faithfulness is not free.** A decoder trained to produce fluent descriptions can also produce fluent *misdescriptions* of the internal state — the well-documented unfaithfulness of chain-of-thought explanations in current LLMs is the warning. "Seeing the thought" is therefore not the same as "seeing the true thought"; the faithfulness of the read-out is itself an open problem, not a solved feature.
 
 ---
 

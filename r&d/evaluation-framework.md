@@ -71,12 +71,15 @@ DCCs are the long-term target: dynamic, reactivatable, compositional latent conf
 - **Metric.** Control/task performance of a planner that imagines futures in latent space vs. a reactive (no-imagination) baseline, on tasks requiring look-ahead and backtracking.
 - **Control.** DreamerV3 and V-JEPA-2-AC are the reference points: LCA must show that its *goal-conditioned, memory-linked* structure adds something over a plain world model, not just that planning-in-latent works (that is already established).
 
-### 3.4 Decoder-removal robustness (the decisive one)
-- **Question.** Does cognition survive when language is taken away?
-- **Protocol.** Train with the introspection/decoder layer, then **disable it** at test time.
-- **Metric.** Retention of prediction, planning, and control performance with the decoder off.
-- **Falsifiable prediction.** Core competencies persist without the decoder.
-- **Null result.** If performance collapses when language decoding is removed, then — regardless of any other metric — language was the substrate after all, and the paper's central claim is falsified for this system. **This is the experiment that can most cleanly kill the thesis, which is exactly why it matters most.**
+### 3.4 Interface vs substrate — a double dissociation (the decisive test)
+The central claim — cognition is latent, language is interface — is most cleanly tested not by one ablation but by **two opposite ones**:
+
+- **Remove the read-out decoder** (the language interface). *Prediction:* prediction, planning, and control are unchanged; only the ability to *observe* the internal thought is lost. *If instead performance drops,* language was doing cognitive work and was not merely an interface — the thesis is falsified for this system.
+- **Ablate the latent metacognition** (the in-loop self-model that forms intermediate goals; `paper.md` §6.1). *Prediction:* cognition measurably degrades, because this is substrate. *If instead nothing changes,* the metacognition was decorative and the architecture is overspecified.
+
+**Why the pair matters.** One component you can remove with no effect (proves it is *interface*) together with one you cannot (proves it is *substrate*) demonstrates that the interface/substrate boundary is real and correctly located — far stronger than asserting it. Each half can fail, and each failure falsifies a specific named commitment.
+
+**Caveat — faithfulness.** Passing the first test shows the decoder is *removable*, not that it was *truthful* while present. A read-out decoder can confabulate a plausible narrative unrelated to the actual latent process (cf. unfaithful chain-of-thought in current LLMs). Faithfulness of the read-out must be evaluated separately and is not implied by removability.
 
 ---
 

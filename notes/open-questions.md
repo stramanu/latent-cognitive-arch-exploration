@@ -27,6 +27,12 @@ Grouped roughly from most concrete to most speculative.
 - How does the decoder stay a *probe* without quietly becoming the thing training optimizes for (the Stage-6 risk)?
 - Does cognition actually survive when the language decoder is removed? (If not, the thesis is falsified.)
 
+## Metacognition, introspection, and read-out
+*(Sharpened in study sessions: the split between what is in the cognitive loop and what merely reads it. See `paper.md` §6.)*
+- **The double dissociation as experimental design:** can we show that removing the read-out decoder changes *nothing but observability*, while ablating the latent metacognition *degrades cognition*? One removal that breaks nothing + one that breaks a lot is the strongest available evidence that the interface/substrate boundary is real. (See `r&d/evaluation-framework.md` §3.4.)
+- **Faithfulness of the read-out decoder:** "seeing the thought" is not "seeing the true thought." A fluent decoder can confabulate. How do we measure whether the read-out faithfully reflects the latent metacognition, rather than producing a plausible post-hoc narrative (cf. unfaithful chain-of-thought)?
+- Where exactly is the boundary between latent metacognition (in-loop, writes, non-linguistic) and inner-speech read-out (out-of-loop, read-only, removable)? Is it always cleanly separable, or do some systems blur it?
+
 ## Efficiency (claim, not fact)
 - Is latent-first cognition actually cheaper, or can planning-by-imagination be *more* expensive per decision than a forward pass? (§8 now treats this as an open empirical question, not a given.)
 
